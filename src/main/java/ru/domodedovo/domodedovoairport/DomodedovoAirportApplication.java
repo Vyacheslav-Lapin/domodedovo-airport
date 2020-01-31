@@ -10,6 +10,4 @@ public class DomodedovoAirportApplication {
 		SpringApplication.run(DomodedovoAirportApplication.class, args);
 	}
 
-
-
 }
