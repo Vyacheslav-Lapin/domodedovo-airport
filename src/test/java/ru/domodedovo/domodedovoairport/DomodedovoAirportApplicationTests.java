@@ -29,8 +29,8 @@ class DomodedovoAirportApplicationTests {
 	void contextLoads() {
 	}
 
-  @SneakyThrows
 	@Test
+  @SneakyThrows
 	@DisplayName("Flight works currectly")
 	void flightWorksCuttectlyTest() {
     mockMvc.perform(get("/flights"))
