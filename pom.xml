@@ -27,6 +27,9 @@
     <jcip-annotations.version>1.0</jcip-annotations.version>
     <spotbugs.version>4.0.0-beta4</spotbugs.version>
     <error_prone_annotations.version>2.3.4</error_prone_annotations.version>
+
+    <springfox-swagger.version>3.0.0-SNAPSHOT</springfox-swagger.version>
+    <springfox-swagger-ui-rfc6570.version>1.0.0</springfox-swagger-ui-rfc6570.version>
     <!--endregion-->
 
     <!--region plugins-->
@@ -34,6 +37,14 @@
     <!--endregion-->
 
 	</properties>
+
+  <repositories>
+    <repository>
+      <id>jcenter-snapshots</id>
+      <name>jcenter</name>
+      <url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
+    </repository>
+  </repositories>
 
   <dependencyManagement>
     <dependencies>
@@ -68,6 +79,34 @@
         <artifactId>error_prone_annotations</artifactId>
         <version>${error_prone_annotations.version}</version>
         <scope>provided</scope>
+      </dependency>
+      <!--endregion-->
+
+      <!--region Swagger -->
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger2</artifactId>
+        <version>${springfox-swagger.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>${springfox-swagger.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox.ui</groupId>
+        <artifactId>springfox-swagger-ui-rfc6570</artifactId>
+        <version>${springfox-swagger-ui-rfc6570.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-data-rest</artifactId>
+        <version>${springfox-swagger.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-bean-validators</artifactId>
+        <version>${springfox-swagger.version}</version>
       </dependency>
       <!--endregion-->
 
@@ -141,6 +180,25 @@
     <dependency>
       <groupId>com.google.errorprone</groupId>
       <artifactId>error_prone_annotations</artifactId>
+    </dependency>
+    <!--endregion-->
+
+    <!--region Swagger -->
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox.ui</groupId>
+      <artifactId>springfox-swagger-ui-rfc6570</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-data-rest</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-bean-validators</artifactId>
     </dependency>
     <!--endregion-->
 
